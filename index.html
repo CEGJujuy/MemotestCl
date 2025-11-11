@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Juego de Memoria</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>Juego de Memoria</h1>
+      <div class="stats">
+        <div class="stat">
+          <span class="label">Pares:</span>
+          <span id="pairs" class="value">0/8</span>
+        </div>
+        <div class="stat">
+          <span class="label">Intentos:</span>
+          <span id="attempts" class="value">0</span>
+        </div>
+        <div class="stat">
+          <span class="label">Tiempo:</span>
+          <span id="timer" class="value">00:00</span>
+        </div>
+      </div>
+      <button id="restart" class="btn-restart">Reiniciar</button>
+    </header>
+
+    <div id="game-board" class="game-board"></div>
+
+    <div id="victory-modal" class="modal hidden">
+      <div class="modal-content">
+        <h2>Felicitaciones</h2>
+        <p>Completaste el juego</p>
+        <p class="modal-stats">
+          <strong>Tiempo:</strong> <span id="final-time"></span><br>
+          <strong>Intentos:</strong> <span id="final-attempts"></span>
+        </p>
+        <button id="play-again" class="btn-restart">Jugar de nuevo</button>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="/main.js"></script>
+</body>
+</html>
